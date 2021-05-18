@@ -75,8 +75,8 @@
 <ul>
 <li>     Before porting - <a href="https://github.com/hdodenhof/CircleImageView" target="_blank">https://github.com/hdodenhof/CircleImageView</a></li>
 <li>     After porting - <a href="https://gitee.com/openharmony-tpc/CircleImageView" target="_blank">https://gitee.com/openharmony-tpc/CircleImageView</a></li>
+<li>Image 1</li>
 </ul>
-<p>Image 1</p>
 <p class="image-container"><img style="width: 528.00px" src="img\ede1e49de52b53a.png"></p>
 <ol type="1" start="2">
 <li>Make sure the package commits are recent, ensure it is maintained and not deprecated. (Note: you can find these details in the README.md section of the Package). This helps us to understand whether you should port it completely or what is the process that needs to be followed.</li>
@@ -95,7 +95,9 @@
 <ol type="1" start="4">
 <li>Look for the dependencies in the build.gradle as shown below (Image 2). We have 2 build.gradle for every application , one is  &#34;Module&#34; level, okand one is &#34;Project&#34; level. Here we need to look for &#34;Module&#34; level  and the path is <code>&lt;PROJECT_ROOT&gt;\app\build.gradle</code></li>
 </ol>
-<p>                                Image 2</p>
+<ul>
+<li>Image 2</li>
+</ul>
 <p class="image-container"><img style="width: 399.47px" src="img\4fc3afdeb67bd9b9.png"></p>
 <ol type="1" start="5">
 <li>If it contains dependency libraries or external packages that are not ported, we should port that as well, make sure these checks are performed before porting one. </li>
@@ -115,7 +117,9 @@
 <li>Browse the Url - <a href="https://github.com/hdodenhof/CircleImageView" target="_blank">https://github.com/hdodenhof/CircleImageView</a></li>
 <li>Next click on &#34;Tags&#34; as shown in the below screenshot (Image 3) to retrieve the latest version of the package.</li>
 </ol>
-<p>                                                      Image 3</p>
+<ul>
+<li>  Image 3</li>
+</ul>
 <p class="image-container"><img style="width: 409.87px" src="img\3c0fd38e469f1a96.png"></p>
 <p>        Below is the link to the latest version of the &#34;<strong>CircleImageView</strong>&#34; library.</p>
 <p><a href="https://github.com/hdodenhof/CircleImageView/releases/tag/v3.1.0" target="_blank">https://github.com/hdodenhof/CircleImageView/releases/tag/v3.1.0</a></p>
@@ -123,24 +127,32 @@
 <li>Once the download is complete, extract the files locally.</li>
 <li>Next start your <strong>Android Studio</strong> or any IDE of your choice and open the downloaded project in the Android studio. In this case it would be the &#34;<strong>CircleimageView</strong>&#34; Project.</li>
 </ol>
-<p> Image 4</p>
+<ul>
+<li> Image 4</li>
+</ul>
 <p class="image-container"><img style="width: 279.47px" src="img\d3b2d6d92e53d393.png"></p>
 <p>Once the project is connected in android and synced successfully then we will try to build the package with a simple application just to ensure the package is all good to start for porting.</p>
 <h2 is-upgraded>Test the library with a sample application</h2>
 <ol type="1" start="1">
 <li>First let&#39;s &#34;build&#34; the package by selecting &#34;Build&#34; from the Menu option and then select &#34;Build Bundles/APK&#34; and &#34;Build APK&#34; as shown in the below screenshot (Image 5).</li>
 </ol>
-<p>                                      Image 5</p>
+<ul>
+<li> Image 5</li>
+</ul>
 <p class="image-container"><img style="width: 407.47px" src="img\39d9f045fe969c58.png"></p>
 <p>Sometimes the build Bundles/APK option would be disabled, in those scenarios you can perform it manually from the terminal using &#34;gradlew clean build&#34; as shown below (Image 6).</p>
-<p>                                        Image 6</p>
+<ul>
+<li>Image 6</li>
+</ul>
 <p class="image-container"><img style="width: 601.70px" src="img\b772db934635ddc.png"></p>
 <ol type="1" start="2">
-<li>After it is built successfully, you will find the latest &#34;Sample.debug.apk&#34; file available in the &#34;<code>Sample-&gt; build-&gt; outputs-&gt;apk-&gt; debug</code>&#34; folder.</li>
+<li>After it is built successfully, you will find the latest &#34;<strong>Sample.debug.apk</strong>&#34; file available in the &#34;Sample-&gt; build-&gt; outputs-&gt;apk-&gt; debug&#34; folder.</li>
 <li>You can use this APK and run on any of the emulators to view the sample application of the library usage.</li>
 <li>Once the APK file is up running on the emulator you should be able to view the library behavior as shown below (Image 7).</li>
 </ol>
-<p>     Image 7</p>
+<ul>
+<li>     Image 7</li>
+</ul>
 <p class="image-container"><img style="width: 177.33px" src="img\25db0a5da0e36eab.png"></p>
 <p>Until now we have selected a library, imported to Android studio, synced up and successfully run the sample Application using the APK file on the Emulator.</p>
 <h2 is-upgraded> Now we will start with the Porting Process</h2>
@@ -148,12 +160,16 @@
 <li>For the Library porting process from Android to HarmonyOS, we need to install the latest DevEco Studio IDE, the latest version of the DevEco Studio can be found here and the Setup process.</li>
 <li>Create a new HarmonyOS project in DevEco Studio as shown below (Image 8).</li>
 </ol>
-<p>                                              Image 8</p>
+<ul>
+<li> Image 8</li>
+</ul>
 <p class="image-container"><img style="width: 416.38px" src="img\74dd3078f53fd00e.png"></p>
 <ol type="1" start="3">
 <li>Next you will be displayed with a list of available templates, choose &#34;Phone&#34; and in the Template section choose &#34;Empty Feature Ability (Java)&#34; as shown below (Image 9).</li>
 </ol>
-<p>                                      Image 9</p>
+<ul>
+<li> Image 9</li>
+</ul>
 <p class="image-container"><img style="width: 405.33px" src="img\86d149f063a33bd6.png"></p>
 <ol type="1" start="4">
 <li>Next you need to configure the Project and make sure you follow the same library name and the package details. In this case we have used &#34;<strong>CircleimageView</strong>&#34; for demonstration and it would be &#34;<strong>de.hdodenhof.circleimageview</strong>&#34;.</li>
@@ -162,48 +178,62 @@
 <p>Package name - package name - maintained same as android.</p>
 <p>Compatible API Version - Select latest SDK.</p>
 <p>Click Finish</p>
-<p> Image 10</p>
+<ul>
+<li> Image 10</li>
+</ul>
 <p class="image-container"><img style="width: 386.94px" src="img\4ecc1f6b6fa82658.png"></p>
 <ol type="1" start="5">
 <li>Currently we have just created an &#34;Entry&#34; in the DevEco Studio to run the application, but our intention is to create the library so that we can port the android library core functionality here.</li>
 </ol>
-<p>                               Image 11</p>
+<ul>
+<li>Image 11</li>
+</ul>
 <p class="image-container"><img style="width: 368.60px" src="img\912da516048fdc40.png"></p>
 <ol type="1" start="6">
 <li>we need to create a library module. Right Click on &#34;Entry&#34; -&gt; New -&gt; Module -&gt; In the pop screen select Device as &#34;Phone&#34; and Template as &#34; HarmonyOS library&#34; as shown below (Image 12).</li>
 </ol>
-<p>                                Image 12                                                   </p>
+<ul>
+<li>Image 12                                                   </li>
+</ul>
 <p class="image-container"><img style="width: 440.95px" src="img\fca21e2928f9bd16.png"></p>
 <ol type="1" start="7">
 <li>Once created with configuration details it looks like the below screenshot (Image 13).</li>
 </ol>
-<p>                                                  Image 13</p>
+<ul>
+<li> Image 13</li>
+</ul>
 <p class="image-container"><img style="width: 421.11px" src="img\dc8588d278139532.png"></p>
 <ol type="1" start="8">
 <li>A library module is created with module level build.gradle. Any external dependencies of this module can be added in this module build.gradle.</li>
 </ol>
 <ul>
 <li>Next, we need to drag drop or add files from original package from Android studio to HarmonyOS as shown below and the file name would be &#34;CircleImageView.java&#34;</li>
+<li> Image 14</li>
 </ul>
-<p>                                  Image 14</p>
 <p class="image-container"><img style="width: 393.88px" src="img\b8401b8a6a9adf88.png"></p>
 <ol type="1" start="9">
 <li>The import statements in original android lib will be showing as error, now replace each of these imports into corresponding hmos imports.</li>
 </ol>
 <p>For example :  </p>
-<p><code>android.content.Context is mapped to ohos.app.Context</code></p>
-<p><code>android.graphics.bitmap --&gt; ohos.media.image.PixelMap</code></p>
-<p><code>android.graphics.Matrix --&gt; ohos.agp.utils.Matrix</code></p>
-<p>  Image 14.1</p>
+<p><strong>android.content.Context is mapped to ohos.app.Context</strong></p>
+<p><strong>android.graphics.bitmap --&gt; ohos.media.image.PixelMap</strong></p>
+<p><strong>android.graphics.Matrix --&gt; ohos.agp.utils.Matrix</strong></p>
+<ul>
+<li>  Image 14.1</li>
+</ul>
 <p class="image-container"><img style="width: 389.00px" src="img\fb014fd12913559c.png"></p>
 <p>Further details about each of these classes can be referred from the API docs which has more detailed explanation about the methods available in each of them.</p>
-<p><strong><code>Tools-&gt;SDK Manager-&gt; Go to HarmonyOS SDK Location path/java/&#34;version&#34;/docs/default/index.html</code></strong></p>
-<p>                                         Image 15</p>
+<p><strong>Tools-&gt;SDK Manager-&gt; Go to HarmonyOS SDK Location path/java/&#34;version&#34;/docs/default/index.html</strong></p>
+<ul>
+<li>Image 15</li>
+</ul>
 <p class="image-container"><img style="width: 437.16px" src="img\306af1d0286e2a54.png"></p>
 <ol type="1" start="10">
 <li>Even after imports are added, there could still be compilation errors as shown below, because we don&#39;t have methods like setImageDrawable, setImageBitmap, setImageResource etc. in the Harmony Image class.</li>
 </ol>
-<p>                                           Image 16</p>
+<ul>
+<li>Image 16</li>
+</ul>
 <p class="image-container"><img style="width: 417.28px" src="img\cb10714762d940e3.png"></p>
 <ol type="1" start="11">
 <li>In these cases, we need to find the corresponding mapping method for these functions in Harmony.</li>
@@ -212,36 +242,50 @@
 <p><strong>setImageDrawable</strong> --&gt; There is no mapping method in Image class, so we can remove the @Override to avoid compilation errors and create custom logic to implement this feature.</p>
 <p>We can create custom logic to get pixelmap object from the element object passed in setImageDrawable and call the setPixelmap passing this created pixelMap as argument.</p>
 <p>There is no setImageResource(int resId) in harmony, instead we have setPixelmap(int resId) which achieves the same functionality. This can be used instead.</p>
-<p>                                                  Image 17</p>
+<ul>
+<li>Image 17</li>
+</ul>
 <p class="image-container"><img style="width: 489.83px" src="img\13960776a9b7dbbf.png">  </p>
 <p>You can find the updated open sourced code <a href="https://gitee.com/openharmony-tpc/CircleImageView/tree/master/circleimageview/src/main/java/de/hdodenhof/circleimageview" target="_blank">here</a> </p>
 <ol type="1" start="12">
 <li>You might still find missing methods like &#34;RectF&#34; and RectF &#39;&#39; are not present in harmony. So, in such cases we can create a custom class and extend the Harmony RectF class as shown below (Image 18).</li>
 </ol>
-<p>                                           Image 18</p>
+<ul>
+<li>Image 18</li>
+</ul>
 <p class="image-container"><img style="width: 401.12px" src="img\265fb0b0bd3dc9a6.png"></p>
-<p>                                         Image 19</p>
+<ul>
+<li>Image 19</li>
+</ul>
 <p class="image-container"><img style="width: 418.81px" src="img\b38bd203ba145d32.png"></p>
-<p>                                Image 20</p>
+<ul>
+<li>Image 20</li>
+</ul>
 <p class="image-container"><img style="width: 418.97px" src="img\5b2682134990fc38.png"></p>
 <ol type="1" start="13">
 <li>Some of the classes will be absent in the current version of SDK, in such cases we check if those classes are necessary for the core functionality of the library, if yes, we must check the feasibility of creating a custom class, else we can enhance this in the upcoming sdk versions.</li>
 </ol>
 <p><strong>Example: Outline, ViewOutlineProvider</strong></p>
 <ol type="1" start="14">
-<li>In Android, for custom Imageviews onDraw() is called from the framework side whenever view is drawn or invalidate() is called. For harmony, to get this callback from f/w we need to implement Component.DrawTask and use <code>addDrawtask</code>(<code>Component.DrawTask</code> task). This will call onDraw(Component component, Canvas canvas) whenever a component is updated through a draw task.</li>
+<li>In Android, for custom Imageviews onDraw() is called from the framework side whenever view is drawn or invalidate() is called. For harmony, to get this callback from f/w we need to implement Component.DrawTask and use addDrawtask(Component.DrawTask task). This will call onDraw(Component component, Canvas canvas) whenever a component is updated through a draw task.</li>
 </ol>
-<p>                                              Image 21</p>
+<ul>
+<li> Image 21</li>
+</ul>
 <p class="image-container"><img style="width: 447.51px" src="img\8fa912d338fa86cf.png"></p>
 <ol type="1" start="15">
 <li>Instead of typing Array in android, we use AttrSet in harmony to access the custom attributes that we set in xml file.</li>
 </ol>
-<p>                                      Image 22</p>
+<ul>
+<li>  Image 22</li>
+</ul>
 <p class="image-container"><img style="width: 435.57px" src="img\1e6cda0d4fd90503.png"></p>
 <ol type="1" start="16">
-<li>In android, bitmap is created using <code>Bitmap.createBimap</code> passing in the drawable height , width, and Bitmap Config as arguments. In Harmony, we have <code>PixelMap.InitializationOptions</code>, into which we fill in the size of the element and pixel format and then create pixelMap using <code>PixelMap.create</code> passing the initializationOptions as argument.</li>
+<li>In android, bitmap is created using Bitmap.createBimap passing in the drawable height , width, and Bitmap Config as arguments. In Harmony, we have PixelMap.InitializationOptions, into which we fill in the size of the element and pixel format and then create pixelMap using PixelMap.create passing the initializationOptions as argument.</li>
 </ol>
-<p>                                        Image 23</p>
+<ul>
+<li>Image 23</li>
+</ul>
 <p class="image-container"><img style="width: 481.34px" src="img\dbc55a03498dcbc8.png"></p>
 <ol type="1" start="17">
 <li>Now you should find all the errors disappeared and no more squiggly red lines in the code. </li>
@@ -253,42 +297,58 @@
       </google-codelab-step>
     
       <google-codelab-step label="Test the developed HarmonyOS library" duration="5">
-        <p>There are 3 types of testing one and you can try any of the below suitable types.</p>
+        <p>There are 2 types of testing one and you can try any of the below suitable types.</p>
 <ol type="1" start="1">
 <li>Junit</li>
-<li>Mocking</li>
 <li>Sample Application</li>
 </ol>
 <h2 is-upgraded>Junit</h2>
 <ol type="1" start="1">
 <li>Junit test cases can be written inside entry-&gt;src-&gt;ohosTest as shown below (Image24)</li>
 </ol>
-<p>Image 24</p>
+<ul>
+<li>Image 24</li>
+</ul>
 <p class="image-container"><img style="width: 434.29px" src="img\6829fd07faad620f.png"></p>
 <ol type="1" start="2">
-<li>I have attached a doc (<code>ExampleOhosTest.java</code>) <a href="https://tinyurl.com/j69caf9c" target="_blank">here</a> which contains the list of sample test cases performed on the CircleImageView library. </li>
+<li>I have attached a doc (ExampleOhosTest.java) <a href="https://tinyurl.com/j69caf9c" target="_blank">here</a> which contains the list of sample test cases performed on the CircleImageView library. </li>
 <li>Make sure that Junit is added in dependencies inside entry-&gt;build.gradle and it also has decc{supportType=[&#39;html&#39;,&#39;xml&#39;]} as shown in the screenshot below (Image 25).</li>
 </ol>
 <p>Please Note: Device should be connected(Emulator running) (Image 26)</p>
-<p>                              Image 25</p>
+<ul>
+<li> Image 25</li>
+</ul>
 <p class="image-container"><img style="width: 423.84px" src="img\95528e3f6b9249bf.png"></p>
-<p>                                         Image 26</p>
+<ul>
+<li> Image 26</li>
+</ul>
 <p class="image-container"><img style="width: 424.21px" src="img\8d247e03509463ea.png"></p>
-<p>e. Next,  we need to Click on Gradle-&gt;other-&gt;executeOhosTest. Just click and this will start to execute the Junit cases.</p>
-<p>                                        Image 27</p>
+<ol type="1" start="4">
+<li>Next,  we need to Click on Gradle-&gt;other-&gt;executeOhosTest. Just click and this will start to execute the Junit cases.</li>
+</ol>
+<ul>
+<li>Image 27</li>
+</ul>
 <p class="image-container"><img style="width: 454.50px" src="img\631ed0b2b76abdd3.png"></p>
-<p>f. After successful execution the result will be generated inside entry-&gt;build-&gt;outputs-&gt;ohosDeccTest-&gt;result-&gt;decctest.xml as shown below (Image 28)</p>
-<p>                                        Image 28</p>
+<ol type="1" start="5">
+<li>After successful execution the result will be generated inside entry-&gt;build-&gt;outputs-&gt;ohosDeccTest-&gt;result-&gt;decctest.xml as shown below (Image 28)</li>
+</ol>
+<ul>
+<li>Image 28</li>
+</ul>
 <p class="image-container"><img style="width: 461.21px" src="img\1fcccf88b915f70f.png"></p>
 <p> This xml file gives you the details about the test result if it was successful or failed.</p>
-<h2 is-upgraded>     Mockito</h2>
 <h2 is-upgraded>Sample Application</h2>
 <ol type="1" start="1">
 <li>After the library is completely ported, we can test it by writing a functionality in the <a href="https://gitee.com/openharmony-tpc/CircleImageView/blob/master/entry/src/main/java/de/hdodenhof/circleimageview/sample/slice/MainAbilitySlice.java" target="_blank">MainAbilitySlice.java</a> of the entry folder. Make sure to add the library in the entry <a href="https://gitee.com/openharmony-tpc/CircleImageView/blob/master/entry/build.gradle" target="_blank">build.gradle</a> also as shown below (Image 29).</li>
 </ol>
-<p>Image 29</p>
+<ul>
+<li>Image 29</li>
+</ul>
 <p class="image-container"><img style="width: 428.93px" src="img\5468a1572bac74d2.png"></p>
-<p>                                        Image 30</p>
+<ul>
+<li>Image 30</li>
+</ul>
 <p class="image-container"><img style="width: 426.96px" src="img\e0fc02f64e57204.png"></p>
 <p>Note: if you have any third-party libraries referenced then please mention in the build.gradle file.</p>
 <ol type="1" start="2">
@@ -298,8 +358,8 @@
 <ul>
 <li>Click on Tools -&gt; HVD Manager.</li>
 <li>Next it will prompt you to login and once login successfully you will be displayed with the list of emulators as shown below (Image 31).</li>
+<li> Image 31</li>
 </ul>
-<p>                                         Image 31</p>
 <p class="image-container"><img style="width: 398.40px" src="img\e9497188862308c2.png"></p>
 <ul>
 <li>Choose &#34;Phone&#34; and click on the Play button and this will kick start your emulator.</li>
