@@ -3,36 +3,23 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2021-05-18T09:12:03Z",
-  "id": "hmos-lib-port-guide",
-  "duration": 17,
-  "title": "HMOS Lib Porting Guide",
-  "summary": "In this codelab, you'll get familiar with HMOS Lib Porting Guide.",
-  "source": "18AtQdmhO0j4rzx_uuGYbpTDNwhzs7lVUDizVD8INbEo",
-  "theme": "training",
+  "updated": "2021-05-19T17:00:52+05:30",
+  "id": "how-to-write-a-codelab",
+  "duration": 2,
+  "title": "How to Write a Codelab",
+  "authors": "Karthik",
+  "summary": "How to Write a Codelab",
+  "source": "how-to-write-a-codelab.md",
+  "theme": "",
   "status": [
     "published"
   ],
   "category": [
-    "Training"
-  ],
-  "tags": [
-    "cds17",
-    "chrome-dev-summit-2016",
-    "devfest18",
-    "gdd17",
-    "io2016",
-    "io2017",
-    "io2018",
-    "io2019",
-    "jsconfeu",
-    "kiosk",
-    "pwa-dev-summit",
-    "pwa-roadshow",
-    "tag-web",
-    "typtwd17",
     "web"
   ],
-  "ga": "UA-52746336-1",
-  "url": "hmos-lib-port-guide"
+  "tags": [
+    "medium"
+  ],
+  "feedback": "https://github.com/karthik-jorrigal/Sample/issues",
+  "url": "how-to-write-a-codelab"
 }
